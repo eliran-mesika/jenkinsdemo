@@ -10,6 +10,7 @@ stages {
       steps {
       script {
        sh """ ./mvnw test """
+       junit 'target/surefire-reports/*.xml'
       }}}
    stage('Build docker image') {
       steps {
