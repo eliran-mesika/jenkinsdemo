@@ -6,6 +6,11 @@ stages {
       script {
        sh """ ./mvnw clean install """
       }}}
+    stage('Run maven tests') {
+      steps {
+      script {
+       sh """ ./mvnw test """
+      }}}
    stage('Build docker image') {
       steps {
       script {
