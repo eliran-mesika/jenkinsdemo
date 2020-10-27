@@ -4,7 +4,7 @@ stages {
    stage('Build jar using maven') {
       steps {
       script {
-       sh """ ./mvn clean install """
+       sh """ ./mvnw clean install """
       }}}
    stage('Build docker image') {
       steps {
